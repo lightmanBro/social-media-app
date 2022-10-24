@@ -1,11 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Home } from "./pages/home/Home";
+// import {Person} from '@mui/icons-material'
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    // <Person/>
+    <Home/>
   );
 }
 

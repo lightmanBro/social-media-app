@@ -1,7 +1,8 @@
 import React from 'react'
 import './post.css'
 import { MoreVert } from '@mui/icons-material'
-export default function Post() {
+export default function Post({post}) {
+  console.log(post)
   return (
     <div className='post'>
           <div className="postWrapper">
@@ -9,7 +10,7 @@ export default function Post() {
                               <div className="postTopLeft">
                                         <img className='postProfileImg' src="/assets/image-2.jpg" alt="" />
                                         <span className='postUsername'>Omotoso David</span>
-                                        <span className='postDate'>5 mins ago</span>
+                                        <span className='postDate'>{post.date}</span>
                               </div>
                               <div className="postTopRight">
                                   <MoreVert/>
@@ -17,17 +18,17 @@ export default function Post() {
                               </div>
                     </div>
                     <div className="postCenter">
-                              <span className="postText"> Hey! its my first post:) </span>
-                              <img className='postImg' src="/assets/image-3.jpg" alt="" />
+                              <span className="postText">{post.desc} </span>
+                              <img className='postImg' src={post.photo} alt="" />
                     </div>
                     <div className="postBottom">
                               <div className="postBottomLeft">
                                         <img src="/assets/like.png" alt="" className="likeIcon" />
                                         <img src="/assets/heart.png" alt="" className="likeIcon" />
-                                        <span className="postLikeCounter">32 people like it</span>
+                                        <span className="postLikeCounter">{post.like} people like it</span>
                               </div>
                               <div className="postBottomRight">
-                                        <span className="postCommentText">9 comments</span>
+                                        <span className="postCommentText">{post.comments}</span>
                               </div>
                     </div>
           </div>

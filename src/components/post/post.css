@@ -1,3 +1,6 @@
+* {
+          font-family: lato, Verdana, Geneva, Tahoma, sans-serif;
+}
 .post {
           widows: 100%;
           border-radius: 10px;
@@ -65,4 +68,14 @@
           width: 24px;
           height: 24px;
           margin-right: 5px;
+          cursor: pointer;
+}
+.postLikeCounter {
+          font-style: 15px;
+
+}
+.postCommentText {
+          cursor: pointer;
+          border-bottom: 1px dashed grey;
+          font-style: 15px;
 }

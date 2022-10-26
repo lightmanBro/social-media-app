@@ -1,16 +1,20 @@
-import React from 'react'
-import './post.css'
-import { MoreVert } from '@mui/icons-material'
-export default function Post({post}) {
-  console.log(post)
+import React from 'react';
+import './post.css';
+import { MoreVert } from '@mui/icons-material';
+import { Users } from '../../dummyData';
+
+export default function Post({ post }) {
+
+
   return (
+
     <div className='post'>
           <div className="postWrapper">
                     <div className="postTop">
                               <div className="postTopLeft">
-                                        <img className='postProfileImg' src="/assets/image-2.jpg" alt="" />
-                                        <span className='postUsername'>Omotoso David</span>
-                                        <span className='postDate'>{post.date}</span>
+                                  <img className='postProfileImg' src={ Users.filter((u) => u.id === post.userId)[0].profilePicture} alt="" />
+                                  <span className='postUsername'>{Users.filter((u) => u.id === post.userId)[0].username}</span>
+                                  <span className='postDate'>{post.date}</span>
                               </div>
                               <div className="postTopRight">
                                   <MoreVert/>
@@ -28,7 +32,7 @@ export default function Post({post}) {
                                         <span className="postLikeCounter">{post.like} people like it</span>
                               </div>
                               <div className="postBottomRight">
-                                        <span className="postCommentText">{post.comments}</span>
+                                        <span className="postCommentText">{post.comments } comment(s) </span>
                               </div>
                     </div>
           </div>

@@ -1,7 +1,18 @@
 import React from 'react'
 import './sidebar.css'
-import {RssFeed, Chat, Group, Bookmark,Event, HelpOutline, WorkOutline, School, PlayArrowOutlined} from '@mui/icons-material'
-
+import {
+  RssFeed,
+  Chat,
+  Group,
+  Bookmark,
+  Event,
+  HelpOutline,
+  WorkOutline,
+  School,
+  PlayArrowOutlined
+} from '@mui/icons-material'
+import { Users } from '../../dummyData'
+import CloseFriends from '../closeFriends/CloseFriends'
 export default function Sidebar() {
   return (
     <div className='sidebar'>
@@ -64,35 +75,12 @@ export default function Sidebar() {
               <button className='sidebarButton'>Show More</button>
               <hr className='sidebarHr' />
               <ul className="sidebarFriendList">
-                <li className="sidebarFriend">
-                  <img src="./assets/image-3.jpg" alt="" className="sidebarfriendimg" />
-                  <span className="sidebarFriendName">David Rm</span>
-                </li>
+               {Users.map(u=>(
+                <CloseFriends key={u.id} user={u}/>
+               ))}
               </ul>
-              <ul className="sidebarFriendList">
-                <li className="sidebarFriend">
-                  <img src="./assets/image-3.jpg" alt="" className="sidebarfriendimg" />
-                  <span className="sidebarFriendName">David Rm</span>
-                </li>
-              </ul>
-              <ul className="sidebarFriendList">
-                <li className="sidebarFriend">
-                  <img src="./assets/image-3.jpg" alt="" className="sidebarfriendimg" />
-                  <span className="sidebarFriendName">David Rm</span>
-                </li>
-              </ul>
-              <ul className="sidebarFriendList">
-                <li className="sidebarFriend">
-                  <img src="./assets/image-3.jpg" alt="" className="sidebarfriendimg" />
-                  <span className="sidebarFriendName">David Rm</span>
-                </li>
-              </ul>
-              <ul className="sidebarFriendList">
-                <li className="sidebarFriend">
-                  <img src="./assets/image-3.jpg" alt="" className="sidebarfriendimg" />
-                  <span className="sidebarFriendName">David Rm</span>
-                </li>
-              </ul>
+              
+              
             </ul>
 
           </div>

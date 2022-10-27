@@ -26,7 +26,47 @@ export default function Rightbar({profile}) {
 
   const ProfileRightbar = () =>{
     return (
-      <h1>hey! its Profile</h1>
+      <>
+        <h4 className='rightbarTitle' >User information</h4>
+        <div className="rightbarInfo">
+          <div className="rightbarInfoItem">
+            <span className='rightbarInfoKey'>City:</span>
+            <span className="rightbarInfoValue">Lagos</span>
+          </div>
+          <div className="rightbarInfoItem">
+            <span className='rightbarInfoKey'>From:</span>
+            <span className="rightbarInfoValue">Akure</span>
+          </div>
+          <div className="rightbarInfoItem">
+            <span className='rightbarInfoKey'>Relationship:</span>
+            <span className="rightbarInfoValue">Single</span>
+          </div>
+        </div>
+        <h4 className='rightbarTitle' >User Friends</h4>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowings"></div>
+            <div className="rightbarFollowing">
+              <img src="assets/friend-1.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Juliet Osuagwu</span>
+            </div>
+            <div className="rightbarFollowings"></div>
+            <div className="rightbarFollowing">
+              <img src="assets/friend-2.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Juliet Osuagwu</span>
+            </div>
+            <div className="rightbarFollowings"></div>
+            <div className="rightbarFollowing">
+              <img src="assets/friend-3.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Juliet Osuagwu</span>
+            </div>
+            <div className="rightbarFollowings"></div>
+            <div className="rightbarFollowing">
+              <img src="assets/friend-4.jpg" alt="" className="rightbarFollowingImg" />
+              <span className="rightbarFollowingName">Juliet Osuagwu</span>
+            </div>
+        </div>
+      </>
+      
     )
   }
   return (
